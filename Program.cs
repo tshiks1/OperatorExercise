@@ -6,20 +6,28 @@ namespace OperatorExercise
     {
         static void Main(string[] args)
         {
-            int a = 17;
-            int b = 4;
-            int quotient = a / b;
-            int remainder = a % b;
+            /*Create a method that will Calculate the area of
+            * a circle based on its radius - you can name the method AreaOfCircle
+            This method will use this formula pi * r ^ 2 and return the area of type double
+            The method will also accept r as a parameter
+            Allow a user to input a value for r in the console using the following code:
+        var radius = double.Parse(Console.ReadLine());
+            When finished your output should look something like this:*/
 
-            Console.WriteLine($"{a}/{b} is { quotient} remainder {remainder}");
+
+           
+            Console.Write("What is the radius of your circle?:  ");
+           // var radius = double.Parse(Console.ReadLine());
+            var radius = Convert.ToDouble(Console.ReadLine());
+            var area = AreaOfCircle(radius);
+
+            Console.WriteLine($"The area of a circle with a radius of {radius} is {area} ");
         }
-        /*For division, create two integer variables called a and b. 
-Create a third integer variable and name it quotient (the result of a division) 
-        that stores the result of the division of a and b, 
-        and another integer variable named remainder
-        that stores the remainder (using the % operator). 
-        Write out the results using Console.WriteLine or Console.Write to 
-        write out the results in the following form: if a = 17 and b = 4, print the following:	
-17/4 is 4 remainder 1	*/		
+        public static double AreaOfCircle(double r)
+        {
+            
+            return Math.PI * r * r; ;
+        }
+        	
     }
 }
